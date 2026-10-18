@@ -15,14 +15,13 @@
     <style>
 
         :root {
-            /* Paleta original mantida */
             --primary: #e62429; 
             --secondary: #0047b3; 
             --bg-dark: #0d0d0d;
             --card-bg: #1a1a1a;
             --text-main: #f0f0f0;
             --text-dim: #a0a0a0;
-            --alert-color: #ffcc00;
+            --alert-color: #ffcc00; 
         }
 
         * {
@@ -51,7 +50,6 @@
             position: relative;
             height: 95vh;
 
-            /* Altere o nome da imagem de fundo aqui */
             background-image:
                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.90)),
                 url('bg-starwars.jpg');
@@ -88,6 +86,9 @@
 
         .main-title span {
             color: var(--primary);
+            display: block; /* Para quebrar a linha bonitinho */
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-top: 10px;
         }
 
         .status-badge {
@@ -118,44 +119,6 @@
             max-width: 1200px;
             margin: auto;
             padding: 60px 20px;
-        }
-
-        /* =========================
-           ALERTA DE ATUALIZAÇÃO
-        ========================= */
-        .update-alert {
-            background: var(--alert-color);
-            color: #000;
-            text-align: center;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
-            animation: pulse-alert 2s infinite;
-        }
-
-        .update-alert i {
-            font-size: 1.8rem;
-        }
-
-        @keyframes pulse-alert {
-            0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.6); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 204, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
-        }
-
-        @media (max-width: 768px) {
-            .update-alert {
-                flex-direction: column;
-                font-size: 1rem;
-                padding: 15px;
-            }
         }
 
         /* =========================
@@ -243,12 +206,6 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
-        
-        /* Classe para centralizar o card único */
-        .download-grid-single {
-            display: flex;
-            justify-content: center;
-        }
 
         .dl-card {
             background: var(--card-bg);
@@ -264,12 +221,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
-        
-        .dl-card-single {
-             max-width: 500px;
-             width: 100%;
-             text-align: center;
         }
 
         .dl-card:hover {
@@ -571,7 +522,8 @@
 
             <h1 class="main-title">
                 STAR WARS<br>
-                <span>THE FORCE UNLEASHED</span>
+                THE FORCE UNLEASHED
+                <span>ULTIMATE SITH EDITION</span>
             </h1>
 
             <div class="status-badge">
@@ -579,7 +531,7 @@
             </div>
 
             <p class="hero-description">
-                A tradução definitiva da Ultimate Sith Edition
+                A tradução definitiva de Star Wars: The Force Unleashed
                 para Xbox 360.
             </p>
 
@@ -593,16 +545,6 @@
     <!-- CONTAINER -->
 
     <div class="container">
-
-        <!-- ALERTA DE ATUALIZAÇÃO -->
-        <!-- Ocultado, mas você pode usar depois:
-        <div class="update-alert">
-            <i class="fas fa-exclamation-triangle"></i>
-            <div>
-                Atualização da tradução em XX/XX! Se você baixou a versão antiga, ATUALIZE AGORA para a nova versão.
-            </div>
-        </div>
-        -->
 
         <!-- GALERIA -->
 
@@ -618,7 +560,7 @@
             <img src="print2.jpg" alt="Captura 2">
             <img src="print3.jpg" alt="Captura 3">
             <img src="print4.jpg" alt="Captura 4">
-            
+
         </div>
 
         <!-- DOWNLOADS -->
@@ -643,9 +585,10 @@
                     <h3>Versão Xbox 360</h3>
                 </div>
 
-                <div class="download-grid-single">
+                <!-- Usando o grid padrão, sem centralizar para manter o padrão dos seus cards grandes -->
+                <div class="download-grid">
 
-                    <div class="dl-card dl-card-single">
+                    <div class="dl-card">
 
                         <div>
                             <i class="fas fa-file-download"
@@ -654,12 +597,15 @@
                             <h3>Download Xbox 360</h3>
 
                             <p>
-                                Versão traduzida para Xbox 360 RGH/Exploit. Compatível com consoles desbloqueados.
+                                Versão traduzida para Xbox 360
+                                RGH/Exploit.
+
+                                Compatível com consoles desbloqueados.
                             </p>
                         </div>
 
                         <!-- link href -->
-                        <a href="https://www.tokyogamesrgh.com.br/post/star-wars-the-force-unleashed-xbox-360-rgh-legendado-pt-br"
+                        <a href="https://www.tokyogamesrgh.com.br/post/star-wars-the-force-unleashed-ii-xbox-360-rgh-legendado-pt-br-2026"
                            class="btn xbox-btn"
                            target="_blank">
                             Acessar Página
