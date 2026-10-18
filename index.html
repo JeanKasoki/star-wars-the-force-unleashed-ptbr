@@ -15,14 +15,13 @@
     <style>
 
         :root {
-            /* Paleta Star Wars The Force Unleashed - Ultimate Sith Edition */
-            --primary: #D90429; /* Vermelho Sith / Carmim Intenso - Sabres e CTAs */
-            --secondary: #00F0FF; /* Azul Elétrico / Ciano - Raios da Força */
-            --bg-dark: #0A0A0A; /* Preto Profundo - Vácuo do espaço */
-            --card-bg: #1F2421; /* Cinza Metálico - Naves e Império */
-            --text-main: #F8FAFC; /* Branco Gelo - Textos principais */
-            --text-dim: #a0a0a0; 
-            --alert-color: #ffcc00; 
+            --primary: #ffe81f; /* Amarelo Clássico Star Wars */
+            --secondary: #00a8ff; /* Azul Force Lightning */
+            --bg-dark: #050505; /* Preto mais profundo (espaço) */
+            --card-bg: #121212; /* Contraste sutil para os cards */
+            --text-main: #e8e8e8; /* Branco gelo suave */
+            --text-dim: #888888; /* Cinza elegante para leitura secundária */
+            --alert-color: #e50914; /* Vermelho Sith para destaques/alertas */
         }
 
         * {
@@ -52,7 +51,7 @@
             height: 95vh;
 
             background-image:
-                linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.95)),
+                linear-gradient(rgba(5,5,5,0.70), rgba(5,5,5,0.95)),
                 url('bg-starwars.jpg');
 
             background-size: cover;
@@ -87,15 +86,15 @@
 
         .main-title span {
             color: var(--primary);
-            display: block; 
+            display: block; /* Para quebrar a linha bonitinho */
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             margin-top: 10px;
         }
 
         .status-badge {
             display: inline-block;
-            background: #27ae60;
-            color: white;
+            background: var(--primary);
+            color: #000; /* Texto preto para contraste perfeito com o amarelo */
 
             padding: 8px 18px;
 
@@ -108,7 +107,7 @@
         .hero-description {
             max-width: 700px;
             margin: 0 auto;
-            color: #ddd;
+            color: var(--text-main);
             font-size: 1.1rem;
         }
 
@@ -141,7 +140,7 @@
         .gallery img {
             width: 100%;
             border-radius: 15px;
-            border: 2px solid #333;
+            border: 2px solid #222;
 
             transition: 0.3s;
 
@@ -199,15 +198,13 @@
         }
 
         .xbox {
-            background: linear-gradient(90deg, #107c10, #1db954);
+            background: linear-gradient(90deg, #0b5e0b, #107c10); /* Verde oficial escuro */
         }
 
-        /* Usa flexbox para manter os cards largos e centralizados, igual ao seu original */
         .download-grid {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            justify-content: center; /* Centraliza caso haja menos cards */
         }
 
         .dl-card {
@@ -217,24 +214,20 @@
 
             padding: 40px;
 
-            border: 1px solid #2c2c2c;
+            border: 1px solid #222;
 
             transition: 0.3s;
 
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
-            /* Ajuste para se comportar como no grid original */
-            flex: 1 1 320px; 
-            max-width: 500px;
         }
 
         .dl-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
 
-            box-shadow: 0 10px 40px rgba(217, 4, 41, 0.5); /* Sombra com a cor Sith */
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
         }
 
         .dl-card i {
@@ -280,20 +273,25 @@
         }
 
         .xbox-btn {
-            background: #32cd32;
-            color: black;
+            background: #107c10;
+            color: #fff;
+        }
+
+        .xbox-btn:hover {
+            background: #1db954; /* Brilho sutil no verde ao passar o mouse */
+            color: #000;
         }
 
         .btn-hub {
             display: inline-block;
             margin-top: 30px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             color: #fff;
             padding: 12px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: 0.3s;
             backdrop-filter: blur(5px);
         }
@@ -301,7 +299,7 @@
         .btn-hub:hover {
             background: var(--primary);
             border-color: var(--primary);
-            color: #fff; /* Mantido branco para contraste */
+            color: #000; /* Texto preto sobre fundo amarelo */
             transform: scale(1.05);
         }
 
@@ -310,7 +308,7 @@
         ========================= */
 
         .platform-info {
-            background: #111;
+            background: var(--card-bg);
 
             padding: 40px;
 
@@ -343,7 +341,7 @@
         ========================= */
 
         .credits-section {
-            background: #161616;
+            background: #0a0a0a;
 
             padding: 50px;
 
@@ -351,7 +349,7 @@
 
             margin-top: 70px;
 
-            border: 1px solid #222;
+            border: 1px solid #1a1a1a;
 
             text-align: center;
         }
@@ -390,7 +388,7 @@
 
             padding: 70px 0;
 
-            border-top: 1px solid #333;
+            border-top: 1px solid #222;
 
             margin-top: 60px;
         }
@@ -409,13 +407,13 @@
         }
 
         .support-card {
-            background: linear-gradient(135deg, #222, #111);
+            background: linear-gradient(135deg, #181818, #0a0a0a);
 
             padding: 30px;
 
             border-radius: 20px;
 
-            border: 1px solid var(--primary);
+            border: 1px solid #222;
 
             text-align: center;
         }
@@ -425,8 +423,8 @@
 
             margin-top: 20px;
 
-            background: white;
-            color: black;
+            background: var(--primary);
+            color: #000;
 
             padding: 12px 25px;
 
@@ -434,6 +432,11 @@
 
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .livepix-btn:hover {
+            filter: brightness(1.15);
         }
 
         footer {
@@ -509,6 +512,10 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
     </style>
@@ -535,7 +542,8 @@
             </div>
 
             <p class="hero-description">
-                A tradução definitiva da Ultimate Sith Edition para Xbox 360.
+                A tradução definitiva de Star Wars: The Force Unleashed
+                para Xbox 360.
             </p>
 
             <a href="https://jeankasoki.github.io/traducoes/" class="btn-hub">
@@ -588,19 +596,22 @@
                     <h3>Versão Xbox 360</h3>
                 </div>
 
+                <!-- Usando o grid padrão, sem centralizar para manter o padrão dos seus cards grandes -->
                 <div class="download-grid">
 
                     <div class="dl-card">
 
                         <div>
-                            <!-- A cor secundaria usada aqui para dar o contraste do raio de energia azul -->
                             <i class="fas fa-file-download"
-                               style="color:var(--secondary);"></i>
+                               style="color:#32cd32;"></i>
 
                             <h3>Download Xbox 360</h3>
 
                             <p>
-                                Versão traduzida para Xbox 360 RGH/Exploit. Compatível com consoles desbloqueados.
+                                Versão traduzida para Xbox 360
+                                RGH/Exploit.
+
+                                Compatível com consoles desbloqueados.
                             </p>
                         </div>
 
@@ -662,7 +673,7 @@
 
                 <div class="credit-item">
                     <h4>DIREÇÃO E TRADUÇÃO</h4>
-                    <p>JeanKasoki</p>
+                    <p>JeanKasoki e Mauricio</p>
                 </div>
 
                 <div class="credit-item">
@@ -671,8 +682,8 @@
                 </div>
 
                 <div class="credit-item">
-                    <h4>EDIÇÃO DE FONTES</h4>
-                    <p>JeanKasoki</p>
+                    <h4>EDIÇÃO DE VÍDEO</h4>
+                    <p>Niccbilac</p>
                 </div>
 
                 <div class="credit-item">
