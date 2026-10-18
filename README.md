@@ -1,4 +1,3 @@
-
 # 🌌⚔️ Star Wars: The Force Unleashed - Ultimate Sith Edition | Tradução PT-BR
 
 ![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen)
