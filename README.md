@@ -1,4 +1,8 @@
+
 # 🌌⚔️ Star Wars: The Force Unleashed - Ultimate Sith Edition | Tradução PT-BR
+
+![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen)
+![Plataformas](https://img.shields.io/badge/Plataformas-Xbox%20360%20%7C%20PC-orange)
 
 Fala, galera! Depois de muitos anos de espera, é com um orgulho imenso que venho compartilhar um projeto muito especial com vocês. O jogo completo com todas as DLCs de **Star Wars: The Force Unleashed - Ultimate Sith Edition** para Xbox 360 está finalmente traduzido para português brasileiro!
 
