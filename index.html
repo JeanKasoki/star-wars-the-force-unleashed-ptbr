@@ -15,12 +15,13 @@
     <style>
 
         :root {
-            --primary: #e62429; 
-            --secondary: #0047b3; 
-            --bg-dark: #0d0d0d;
-            --card-bg: #1a1a1a;
-            --text-main: #f0f0f0;
-            --text-dim: #a0a0a0;
+            /* Paleta Star Wars The Force Unleashed - Ultimate Sith Edition */
+            --primary: #D90429; /* Vermelho Sith / Carmim Intenso - Sabres e CTAs */
+            --secondary: #00F0FF; /* Azul Elétrico / Ciano - Raios da Força */
+            --bg-dark: #0A0A0A; /* Preto Profundo - Vácuo do espaço */
+            --card-bg: #1F2421; /* Cinza Metálico - Naves e Império */
+            --text-main: #F8FAFC; /* Branco Gelo - Textos principais */
+            --text-dim: #a0a0a0; 
             --alert-color: #ffcc00; 
         }
 
@@ -51,7 +52,7 @@
             height: 95vh;
 
             background-image:
-                linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.90)),
+                linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.95)),
                 url('bg-starwars.jpg');
 
             background-size: cover;
@@ -86,7 +87,7 @@
 
         .main-title span {
             color: var(--primary);
-            display: block; /* Para quebrar a linha bonitinho */
+            display: block; 
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             margin-top: 10px;
         }
@@ -201,10 +202,12 @@
             background: linear-gradient(90deg, #107c10, #1db954);
         }
 
+        /* Usa flexbox para manter os cards largos e centralizados, igual ao seu original */
         .download-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 30px;
+            justify-content: center; /* Centraliza caso haja menos cards */
         }
 
         .dl-card {
@@ -221,13 +224,17 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            
+            /* Ajuste para se comportar como no grid original */
+            flex: 1 1 320px; 
+            max-width: 500px;
         }
 
         .dl-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 40px rgba(217, 4, 41, 0.5); /* Sombra com a cor Sith */
         }
 
         .dl-card i {
@@ -294,6 +301,7 @@
         .btn-hub:hover {
             background: var(--primary);
             border-color: var(--primary);
+            color: #fff; /* Mantido branco para contraste */
             transform: scale(1.05);
         }
 
@@ -501,10 +509,6 @@
                 flex-direction: column;
                 text-align: center;
             }
-
-            .download-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
     </style>
@@ -531,8 +535,7 @@
             </div>
 
             <p class="hero-description">
-                A tradução definitiva de Star Wars: The Force Unleashed
-                para Xbox 360.
+                A tradução definitiva da Ultimate Sith Edition para Xbox 360.
             </p>
 
             <a href="https://jeankasoki.github.io/traducoes/" class="btn-hub">
@@ -585,27 +588,24 @@
                     <h3>Versão Xbox 360</h3>
                 </div>
 
-                <!-- Usando o grid padrão, sem centralizar para manter o padrão dos seus cards grandes -->
                 <div class="download-grid">
 
                     <div class="dl-card">
 
                         <div>
+                            <!-- A cor secundaria usada aqui para dar o contraste do raio de energia azul -->
                             <i class="fas fa-file-download"
-                               style="color:#32cd32;"></i>
+                               style="color:var(--secondary);"></i>
 
                             <h3>Download Xbox 360</h3>
 
                             <p>
-                                Versão traduzida para Xbox 360
-                                RGH/Exploit.
-
-                                Compatível com consoles desbloqueados.
+                                Versão traduzida para Xbox 360 RGH/Exploit. Compatível com consoles desbloqueados.
                             </p>
                         </div>
 
                         <!-- link href -->
-                        <a href="https://www.tokyogamesrgh.com.br/post/star-wars-the-force-unleashed-ii-xbox-360-rgh-legendado-pt-br-2026"
+                        <a href="https://www.tokyogamesrgh.com.br/post/star-wars-the-force-unleashed-ultimate-sith-edition-xbox-360-rgh-legendado-pt-br-2026"
                            class="btn xbox-btn"
                            target="_blank">
                             Acessar Página
